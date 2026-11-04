@@ -15,6 +15,11 @@ PAIN_TYPES = {"bug", "feature_request", "complaint"}
 
 MIN_APP_REVIEWS = 200  # apps below this are left out of "best app" comparisons
 
+# Themes kept in the tags but left out of the pain-gap ranking, the charts and
+# the synthesis. Price complaints appear for every paid app and do not point to
+# a product gap, so they are reported only as context.
+EXCLUDED_THEMES = {"other", "pricing"}
+
 
 def load_tagged() -> pd.DataFrame:
     reviews = pd.read_csv(config.REVIEWS_FILE)
@@ -57,7 +62,7 @@ def pain_gap(df: pd.DataFrame, theme_names: dict[str, str]) -> pd.DataFrame:
     ex = exploded(df)
     rows = []
     for theme in full.index:
-        if theme == "other":
+        if theme in EXCLUDED_THEMES:
             continue
         rates = full.loc[theme]
         mentions = ex[ex["theme"] == theme]

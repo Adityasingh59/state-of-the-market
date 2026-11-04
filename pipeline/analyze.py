@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 
 from . import config  # noqa: E402
-from .data import MIN_APP_REVIEWS, exploded, load_tagged, pain_gap, theme_app_table, theme_names  # noqa: E402
+from .data import EXCLUDED_THEMES, MIN_APP_REVIEWS, exploded, load_tagged, pain_gap, theme_app_table, theme_names  # noqa: E402
 
 APP_NAMES = {a["slug"]: a["name"] for a in config.load_apps()}
 
@@ -92,6 +92,7 @@ def main() -> None:
     names = theme_names()
 
     t = theme_app_table(df)
+    t = t[~t["theme"].isin(EXCLUDED_THEMES)]
     t.to_csv(config.REPORT_DIR / "theme_by_app.csv", index=False)
     gap = pain_gap(df, names)
     gap.to_csv(config.REPORT_DIR / "pain_gap.csv", index=False)
