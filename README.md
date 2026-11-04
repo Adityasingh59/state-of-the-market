@@ -11,7 +11,8 @@ The default category is personal finance and budgeting apps (YNAB, Monarch, Copi
 | Step | Command | API spend | Output |
 |---|---|---|---|
 | 1. App list | `python -m pipeline.find_ids --write` | none | store IDs in `config/apps.json` |
-| 2. Scrape | `python -m pipeline.scrape` | none | `data/raw/*.csv`, `data/reviews.csv` |
+| 2a. Scrape (built-in) | `python -m pipeline.scrape` | none | `data/raw/*.csv`, `data/reviews.csv` |
+| 2b. Or Apify (App Store) | `python -m pipeline.apify import data/apify/*.json` | Apify credits | same as 2a |
 | 3. Theme list | `python -m pipeline.draft_themes` | ~$0.10 | `config/themes.json` (draft) |
 | 4. Tagging | `python -m pipeline.tag` | most of the budget | `data/tagged/tags_primary.jsonl` |
 | 5. Reliability | `python -m pipeline.reliability` | ~20% of tagging | `reports/reliability.json` |
@@ -51,6 +52,22 @@ python -m pipeline.reliability
 python -m pipeline.synthesize --top 10
 python -m pipeline.analyze
 ```
+
+## Getting reviews through Apify
+
+App Store reviews can also come from the Apify actor [The Better App Store Reviews Scraper](https://apify.com/betterscrapers/the-better-app-store-reviews-scraper). Google Play still uses the built-in scraper, and Copilot Money is iOS only.
+
+```bash
+# Option A: run the actor in the Apify console, export the dataset as JSON, save it under data/apify/
+python -m pipeline.apify import data/apify/*.json
+python -m pipeline.apify import data/apify/copilot.json --app copilot   # file with one app's reviews
+
+# Option B: start the run from here. Paste the console's input JSON into config/apify_input.json
+export APIFY_TOKEN=...
+python -m pipeline.apify run
+```
+
+The importer maps the usual field names automatically and prints which field it used for each column. Reviews are matched to apps by `appstore_id`, so fill those in `config/apps.json` (the number after `id` in the apps.apple.com URL), or import one file per app with `--app`. Both options then rebuild `data/reviews.csv` with the same cleaning as the built-in scraper.
 
 ## Cost control
 

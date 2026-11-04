@@ -1,19 +1,81 @@
 {
   "category": "Personal finance and budgeting apps",
-  "notes": "Run `python -m pipeline.find_ids --write` to fill in store IDs, then check every pick by hand. Set an ID to null to skip that store.",
-  "appstore_countries": ["us", "gb", "ca", "au", "in", "nz", "ie"],
+  "notes": "Fill appstore_id (numeric id from the apps.apple.com URL) and play_package. Copilot Money is iOS only. Reviews can come from Apify (pipeline.apify) or the built-in scraper (pipeline.scrape).",
+  "appstore_countries": [
+    "us",
+    "gb",
+    "ca",
+    "au",
+    "in",
+    "nz",
+    "ie"
+  ],
   "play_lang": "en",
   "play_country": "us",
   "apps": [
-    {"slug": "ynab",        "name": "YNAB",                       "search": "YNAB You Need A Budget", "appstore_id": null, "play_package": null},
-    {"slug": "monarch",     "name": "Monarch Money",              "search": "Monarch Money",          "appstore_id": null, "play_package": null},
-    {"slug": "copilot",     "name": "Copilot Money",              "search": "Copilot Money",          "appstore_id": null, "play_package": null},
-    {"slug": "rocketmoney", "name": "Rocket Money",               "search": "Rocket Money",           "appstore_id": null, "play_package": null},
-    {"slug": "simplifi",    "name": "Quicken Simplifi",           "search": "Simplifi by Quicken",    "appstore_id": null, "play_package": null},
-    {"slug": "everydollar", "name": "EveryDollar",                "search": "EveryDollar",            "appstore_id": null, "play_package": null},
-    {"slug": "pocketguard", "name": "PocketGuard",                "search": "PocketGuard",            "appstore_id": null, "play_package": null},
-    {"slug": "goodbudget",  "name": "Goodbudget",                 "search": "Goodbudget",             "appstore_id": null, "play_package": null},
-    {"slug": "empower",     "name": "Empower Personal Dashboard", "search": "Empower Personal Dashboard", "appstore_id": null, "play_package": null},
-    {"slug": "honeydue",    "name": "Honeydue",                   "search": "Honeydue couples finance", "appstore_id": null, "play_package": null}
+    {
+      "slug": "monarch",
+      "name": "Monarch Money",
+      "search": "Monarch Money",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    },
+    {
+      "slug": "ynab",
+      "name": "YNAB",
+      "search": "YNAB You Need A Budget",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    },
+    {
+      "slug": "rocketmoney",
+      "name": "Rocket Money",
+      "search": "Rocket Money",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    },
+    {
+      "slug": "copilot",
+      "name": "Copilot Money",
+      "search": "Copilot Money",
+      "appstore_id": null,
+      "play_package": null,
+      "android": false
+    },
+    {
+      "slug": "everydollar",
+      "name": "EveryDollar",
+      "search": "EveryDollar",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    },
+    {
+      "slug": "pocketguard",
+      "name": "PocketGuard",
+      "search": "PocketGuard",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    },
+    {
+      "slug": "simplifi",
+      "name": "Simplifi by Quicken",
+      "search": "Simplifi by Quicken",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    },
+    {
+      "slug": "goodbudget",
+      "name": "Goodbudget",
+      "search": "Goodbudget",
+      "appstore_id": null,
+      "play_package": null,
+      "android": true
+    }
   ]
 }
