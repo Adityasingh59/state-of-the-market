@@ -31,6 +31,10 @@ jobs:
         run: |
           git fetch origin scraped-data
           git checkout origin/scraped-data -- data/reviews.csv data/raw
+          # Resume: keep tags and spend from an earlier run, if there was one.
+          if git fetch origin analysis 2>/dev/null; then
+            git checkout origin/analysis -- data/tagged data/cost_ledger.jsonl || true
+          fi
           git reset -q data
       - name: Tag
         run: python -m pipeline.tag

@@ -35,6 +35,9 @@ def cohen_kappa(a: list[str], b: list[str]) -> float:
 
 
 def report() -> dict:
+    if not config.CHECK_FILE.exists():
+        print(f"No reliability tags in {config.CHECK_FILE.name} yet; nothing to compare.")
+        return {}
     p = read_jsonl(config.TAGS_FILE).set_index("review_id")
     c = read_jsonl(config.CHECK_FILE).set_index("review_id")
     both = p.join(c, lsuffix="_a", rsuffix="_b", how="inner")
