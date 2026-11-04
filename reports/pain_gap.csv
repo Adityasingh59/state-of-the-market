@@ -1,14 +1,14 @@
 theme,theme_name,pain_reviews,category_pain_rate,best_app,best_app_rate,worst_app,worst_app_rate,feature_requests,avg_rating_when_mentioned
-bank_sync,Bank connection and sync,553,0.163,goodbudget,0.093,simplifi,0.3274,61,2.47
-performance_bugs,Performance and stability,383,0.1129,monarch,0.0784,goodbudget,0.3372,13,1.98
-ux_ease,Ease of use and design,390,0.115,rocketmoney,0.0621,ynab,0.3294,65,3.55
-support_trust,Customer support and trust,432,0.1274,goodbudget,0.0465,simplifi,0.1883,11,1.96
-budgeting_method,Budgeting method and flexibility,213,0.0628,rocketmoney,0.0199,goodbudget,0.2442,67,3.87
-categorization,Transaction categorization,143,0.0422,rocketmoney,0.0157,copilot,0.1221,52,3.42
-platform_access,Platform and device support,123,0.0363,rocketmoney,0.0157,goodbudget,0.1279,41,2.93
-reports_insights,Reports and insights,113,0.0333,rocketmoney,0.0133,copilot,0.0725,48,4.35
-migration,Switching and import,47,0.0139,rocketmoney,0.0025,simplifi,0.0583,17,4.12
-bills_subscriptions,Bills and subscription tracking,250,0.0737,ynab,0.0024,rocketmoney,0.1616,38,3.22
-shared_finances,Shared and household finances,46,0.0136,rocketmoney,0.0008,goodbudget,0.0698,18,4.17
-goals_savings,Goals and savings,70,0.0206,pocketguard,0.0,everydollar,0.0487,29,4.35
-investments_networth,Investments and net worth,68,0.02,goodbudget,0.0,simplifi,0.0717,26,3.77
+bank_sync,Bank connection and sync,1117,0.151,goodbudget,0.093,pocketguard,0.2794,100,2.4
+performance_bugs,Performance and stability,597,0.0807,monarch,0.0549,goodbudget,0.3372,14,2.02
+support_trust,Customer support and trust,819,0.1107,goodbudget,0.0465,pocketguard,0.201,20,1.96
+ux_ease,Ease of use and design,776,0.1049,rocketmoney,0.046,ynab,0.3051,94,3.36
+categorization,Transaction categorization,308,0.0416,rocketmoney,0.0167,simplifi,0.1415,91,3.36
+reports_insights,Reports and insights,266,0.036,rocketmoney,0.0163,simplifi,0.0829,111,4.35
+platform_access,Platform and device support,279,0.0377,rocketmoney,0.0157,goodbudget,0.1279,87,2.91
+budgeting_method,Budgeting method and flexibility,387,0.0523,rocketmoney,0.0123,goodbudget,0.2442,121,4.13
+bills_subscriptions,Bills and subscription tracking,454,0.0614,ynab,0.005,rocketmoney,0.1187,62,3.45
+migration,Switching and import,80,0.0108,rocketmoney,0.002,simplifi,0.0512,25,4.15
+shared_finances,Shared and household finances,69,0.0093,rocketmoney,0.0007,goodbudget,0.0698,24,4.33
+goals_savings,Goals and savings,125,0.0169,pocketguard,0.0,goodbudget,0.0465,40,4.32
+investments_networth,Investments and net worth,130,0.0176,goodbudget,0.0,simplifi,0.0659,51,3.82
