@@ -58,6 +58,8 @@ def main() -> None:
             print(f"  App Store lookup failed: {e}")
             a = []
         try:
+            if not app.get("android", True):
+                raise RuntimeError("marked iOS only, skipped")
             g = play_candidates(app["search"], data.get("play_lang", "en"), data.get("play_country", "us"))
         except Exception as e:
             print(f"  Play lookup failed: {e}")
@@ -69,7 +71,7 @@ def main() -> None:
         if args.write:
             if app.get("appstore_id") is None and a:
                 app["appstore_id"] = a[0]["id"]
-            if app.get("play_package") is None and g:
+            if app.get("play_package") is None and g and app.get("android", True):
                 app["play_package"] = g[0]["id"]
             print(f"  -> using appstore_id={app.get('appstore_id')} play_package={app.get('play_package')}")
 

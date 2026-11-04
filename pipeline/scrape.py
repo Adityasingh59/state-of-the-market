@@ -145,7 +145,7 @@ def main() -> None:
                 rows = scrape_appstore(app["slug"], str(app["appstore_id"]), data["appstore_countries"], cutoff)
                 pd.DataFrame(rows, columns=COLUMNS).to_csv(config.RAW_DIR / f"{app['slug']}_appstore.csv", index=False)
                 print(f"    App Store: {len(rows)}")
-            if app.get("play_package"):
+            if app.get("play_package") and app.get("android", True):
                 # Over-fetch Play so the merged cap still has room after cleaning.
                 rows = scrape_play(app["slug"], app["play_package"], data.get("play_lang", "en"),
                                    data.get("play_country", "us"), cutoff, target=args.max_per_app * 2)

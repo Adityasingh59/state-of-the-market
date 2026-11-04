@@ -1,0 +1,41 @@
+name: Scrape reviews
+
+# Runs the store-ID lookup and the App Store + Google Play scraper on a GitHub
+# runner (which has normal internet access), then pushes the results to the
+# `scraped-data` branch. Start it from the Actions tab or the API.
+on:
+  workflow_dispatch:
+    inputs:
+      months:
+        description: "How many months back"
+        default: "12"
+      max_per_app:
+        description: "Cap per app after cleaning"
+        default: "3000"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Find store IDs
+        run: python -m pipeline.find_ids --write 2>&1 | tee find_ids.log
+      - name: Scrape
+        run: python -m pipeline.scrape --months "${{ inputs.months }}" --max-per-app "${{ inputs.max_per_app }}" 2>&1 | tee scrape.log
+      - name: Push data to scraped-data branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B scraped-data
+          mkdir -p data/logs && mv find_ids.log scrape.log data/logs/
+          git add -f data/raw data/reviews.csv data/logs config/apps.json
+          git commit -m "Scraped reviews $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f origin scraped-data
