@@ -18,7 +18,7 @@
       "name": "Monarch Money",
       "search": "Monarch Money",
       "appstore_id": "1459319842",
-      "play_package": null,
+      "play_package": "com.monarchmoney.mobile",
       "android": true,
       "match": "Monarch"
     },
@@ -63,7 +63,7 @@
       "name": "PocketGuard",
       "search": "PocketGuard",
       "appstore_id": "949414211",
-      "play_package": null,
+      "play_package": "com.pocketguard.android.app",
       "android": true,
       "match": "PocketGuard"
     },
@@ -81,7 +81,7 @@
       "name": "Goodbudget",
       "search": "Goodbudget",
       "appstore_id": "471112395",
-      "play_package": null,
+      "play_package": "com.dayspringtech.envelopes",
       "android": true,
       "match": "Goodbudget"
     }
