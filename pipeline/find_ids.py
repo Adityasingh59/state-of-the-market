@@ -35,7 +35,7 @@ def appstore_candidates(term: str, country: str = "us", limit: int = 5) -> list[
     ]
 
 
-def play_candidates(term: str, lang: str, country: str, n: int = 5) -> list[dict]:
+def play_candidates(term: str, lang: str, country: str, n: int = 30) -> list[dict]:
     return [
         {"id": x["appId"], "name": x.get("title"), "seller": x.get("developer"),
          "ratings": x.get("ratings") or 0}
@@ -61,6 +61,8 @@ def main() -> None:
             if not app.get("android", True):
                 raise RuntimeError("marked iOS only, skipped")
             g = play_candidates(app["search"], data.get("play_lang", "en"), data.get("play_country", "us"))
+            if app.get("match"):
+                g += play_candidates(f"{app['match']} budget", data.get("play_lang", "en"), data.get("play_country", "us"))
         except Exception as e:
             print(f"  Play lookup failed: {e}")
             g = []
@@ -69,10 +71,15 @@ def main() -> None:
         for c in g:
             print(f"  [Play]      {c['id']:<40} {c['name']}  ({c['seller']})")
         if args.write:
-            if app.get("appstore_id") is None and a:
-                app["appstore_id"] = a[0]["id"]
-            if app.get("play_package") is None and g and app.get("android", True):
-                app["play_package"] = g[0]["id"]
+            # Only accept a hit whose title contains the app's match word: the
+            # top search result is often a different app.
+            word = (app.get("match") or app["name"].split()[0]).lower()
+            a_ok = [c for c in a if word in (c["name"] or "").lower()]
+            g_ok = [c for c in g if word in (c["name"] or "").lower()]
+            if app.get("appstore_id") is None and a_ok:
+                app["appstore_id"] = a_ok[0]["id"]
+            if app.get("play_package") is None and g_ok and app.get("android", True):
+                app["play_package"] = g_ok[0]["id"]
             print(f"  -> using appstore_id={app.get('appstore_id')} play_package={app.get('play_package')}")
 
     if args.write:

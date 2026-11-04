@@ -1,6 +1,6 @@
 {
   "category": "Personal finance and budgeting apps",
-  "notes": "Fill appstore_id (numeric id from the apps.apple.com URL) and play_package. Copilot Money is iOS only. Reviews can come from Apify (pipeline.apify) or the built-in scraper (pipeline.scrape).",
+  "notes": "Store IDs checked by hand. find_ids only fills empty IDs, and only with a result whose title contains `match`. Copilot Money is iOS only.",
   "appstore_countries": [
     "us",
     "gb",
@@ -19,63 +19,71 @@
       "search": "Monarch Money",
       "appstore_id": "1459319842",
       "play_package": null,
-      "android": true
+      "android": true,
+      "match": "Monarch"
     },
     {
       "slug": "ynab",
       "name": "YNAB",
       "search": "YNAB You Need A Budget",
-      "appstore_id": null,
-      "play_package": null,
-      "android": true
+      "appstore_id": "1010865877",
+      "play_package": "com.youneedabudget.evergreen.app",
+      "android": true,
+      "match": "YNAB"
     },
     {
       "slug": "rocketmoney",
       "name": "Rocket Money",
       "search": "Rocket Money",
       "appstore_id": "1130616675",
-      "play_package": null,
-      "android": true
+      "play_package": "com.truebill",
+      "android": true,
+      "match": "Rocket Money"
     },
     {
       "slug": "copilot",
       "name": "Copilot Money",
       "search": "Copilot Money",
-      "appstore_id": null,
+      "appstore_id": "1447330651",
       "play_package": null,
-      "android": false
+      "android": false,
+      "match": "Copilot"
     },
     {
       "slug": "everydollar",
       "name": "EveryDollar",
       "search": "EveryDollar",
-      "appstore_id": null,
-      "play_package": null,
-      "android": true
+      "appstore_id": "942571931",
+      "play_package": "com.everydollar.android",
+      "android": true,
+      "match": "EveryDollar"
     },
     {
       "slug": "pocketguard",
       "name": "PocketGuard",
       "search": "PocketGuard",
-      "appstore_id": null,
+      "appstore_id": "949414211",
       "play_package": null,
-      "android": true
+      "android": true,
+      "match": "PocketGuard"
     },
     {
       "slug": "simplifi",
       "name": "Simplifi by Quicken",
       "search": "Simplifi by Quicken",
-      "appstore_id": null,
-      "play_package": null,
-      "android": true
+      "appstore_id": "1449777194",
+      "play_package": "com.quicken.acme",
+      "android": true,
+      "match": "Quicken"
     },
     {
       "slug": "goodbudget",
       "name": "Goodbudget",
       "search": "Goodbudget",
-      "appstore_id": null,
+      "appstore_id": "471112395",
       "play_package": null,
-      "android": true
+      "android": true,
+      "match": "Goodbudget"
     }
   ]
 }
