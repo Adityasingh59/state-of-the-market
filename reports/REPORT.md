@@ -1,110 +1,113 @@
-# State of Budgeting Apps: what 587 App Store reviews say users still lack
+# State of Budgeting Apps: what users still can't get, from 8 apps' reviews
 
-*Pilot study, 4 November 2026. Data: 587 US App Store reviews of Monarch Money (246) and Rocket Money (341), posted 20 July to 3 November 2026.*
+*4 November 2026. 7,396 App Store and Google Play reviews scraped for 8 budgeting apps (5 Nov 2025 to 3 Nov 2026). 1,290 of them were tagged, sampled across all 8 apps.*
 
 ## Summary
 
-- **The pain both apps share is broken bank sync.** Even the app that handles it better, Rocket Money, gets sync complaints in 9.7% of its reviews; Monarch gets them in 15.4%. Reviews that mention sync average 2.3 stars. This is the clearest unmet need in the data: neither app has solved it.
-- **Rocket Money's headline feature is its biggest source of complaints.** 40% of its reviews (136 of 341) are about finding or cancelling subscriptions, and 34% are complaints about it. The two most common requests are for cancellation that actually works (25 reviews) and detection of every subscription (19).
-- **Paying to save money feels wrong to users.** 30% of Rocket Money reviews (102) are about its own price or billing, and 85 of those are negative. About 1 in 10 Rocket Money reviews (34) describe a charge the user didn't expect, after a trial, a cancellation or a deletion.
-- **Support has been automated, and users notice.** Support and trust complaints appear in 18.2% of Rocket Money reviews and 9.3% of Monarch reviews. The recurring ask in both apps is to reach a human.
-- **Monarch wins former Mint users and couples.** 20 reviewers say they came from Mint: 17 of them are positive and they average 4.5 stars. 23 Monarch reviews are from couples or families, and 18 of those are positive.
+1. **Broken bank sync is the problem no app has solved.** It's the only theme complained about in more than 5% of reviews for every one of the 8 apps. The median is 15.5% of an app's reviews, ranging from 8.1% for Goodbudget, which is mostly manual entry, to 32.5% for Simplifi. Reviews that mention sync average 2.5 stars, against 3.3 for the rest.
+2. **Updates are breaking long-time users' routines.** 104 complaint reviews (8% of all tagged) blame a recent update or redesign. Examples are extra taps in YNAB, EveryDollar locking past months, and envelope totals breaking in Goodbudget. Long-time users are among the unhappiest: 64% of their reviews are complaints.
+3. **Users can't reach a human for support.** Support and trust complaints exceed 5% in 7 of 8 apps. Users mostly ask for a real person, not a chatbot, when money or data is at stake.
+4. **App-specific gaps sit on top of that.** Rocket Money's subscription cancelling underdelivers (29.5% of its reviews). EveryDollar and Goodbudget have budgeting-logic problems (21% and 26%). YNAB's changes to its interface draw complaints in 30% of its reviews.
 
-**Product bet:** a "sync you can trust" layer. That means alerts when a connection silently fails, repair of the missing history after reconnecting, and automatic removal of duplicate transactions. It's the one gap both leading apps share, and it sits underneath the duplicate, missing-data and wrong-budget complaints.
+**Product bet: sync you can trust.** Warn users the moment a connection fails. Refill missing history after a reconnect. Remove duplicates automatically. And be honest about which banks work before people pay. It's the one gap every app shares, and much of the duplicate, missing-data and wrong-balance trouble traces back to it.
 
-## The numbers
+*Pricing is left out on purpose. Price complaints appear for every paid app and don't point to a product gap. They are kept in the tags but excluded from the rankings and charts.*
 
-| | Monarch Money | Rocket Money |
-|---|---|---|
-| Reviews | 246 | 341 |
-| Average rating | 3.65 | 2.36 |
-| Positive / negative | 56% / 31% | 23% / 62% |
-| Praise / bug / complaint / pricing (review type) | 55% / 17% / 12% / 7% | 22% / 16% / 37% / 21% |
+## The data
 
-**Pain rate by theme:** the share of an app's reviews that are negative or mixed about a theme, or report a bug, request or complaint there.
+| App | Reviews scraped | Tagged | Avg rating (tagged) | Share of tagged that are pain |
+|---|---|---|---|---|
+| Monarch Money | 1,402 | 306 | 3.61 | 48% |
+| Rocket Money | 3,000 | 298 | 2.60 | 71% |
+| Copilot Money (iOS only) | 495 | 120 | 3.73 | 53% |
+| YNAB | 1,003 | 120 | 3.29 | 59% |
+| EveryDollar | 796 | 120 | 3.14 | 62% |
+| Simplifi by Quicken | 410 | 120 | 2.47 | 76% |
+| PocketGuard | 204 | 120 | 2.98 | 63% |
+| Goodbudget | 86 | 86 | 2.78 | 76% |
+| **Total** | **7,396** | **1,290** | | **62%** |
 
-| Theme | Monarch | Rocket Money | Better of the two |
-|---|---|---|---|
-| Bills and subscription tracking | 1.6% | **33.7%** | Monarch |
-| Pricing and subscription | 12.2% | **28.4%** | Monarch |
-| Customer support and trust | 9.3% | **18.2%** | Monarch |
-| Bank connection and sync | **15.4%** | 9.7% | Rocket Money (still 9.7%) |
-| Ease of use and design | 5.7% | 10.0% | Monarch |
-| Performance and stability | **6.5%** | 1.5% | Rocket Money |
-| Budgeting method and flexibility | **5.7%** | 1.5% | Rocket Money |
+**Pain rate by theme:** the share of an app's tagged reviews that are negative or mixed about a theme, or report a bug, a missing feature or a complaint there.
 
-Charts: `figures/pain_gap.png`, `figures/heatmap.png`. Full table: `pain_gap.csv`.
+| Theme | Copilot | EveryDollar | Goodbudget | Monarch | PocketGuard | Rocket | Simplifi | YNAB | Median |
+|---|---|---|---|---|---|---|---|---|---|
+| **Bank connection and sync** | 19.2% | 12.5% | 8.1% | 17.6% | 26.7% | 9.4% | **32.5%** | 13.3% | **15.5%** |
+| Customer support and trust | 12.5% | 5.8% | 3.5% | 8.8% | **18.3%** | 15.1% | 15.8% | 6.7% | 10.7% |
+| Ease of use and design | 9.2% | 9.2% | 10.5% | 4.9% | 6.7% | 9.7% | 8.3% | **30.0%** | 9.2% |
+| Performance and stability | 11.7% | 7.5% | **34.9%** | 6.5% | 6.7% | 2.3% | 8.3% | 7.5% | 7.5% |
+| Budgeting method | 5.0% | 20.8% | **25.6%** | 5.2% | 5.8% | 1.3% | 7.5% | 12.5% | 6.7% |
+| Platform and devices | 5.0% | 10.8% | 14.0% | 4.6% | 1.7% | 3.0% | 9.2% | 5.0% | 5.0% |
+| Bills and subscriptions | 1.7% | 3.3% | 1.2% | 1.6% | 1.7% | **29.5%** | 10.8% | 0.0% | 1.7% |
+
+Charts: `figures/pain_gap.png`, `figures/heatmap.png`. Tables: `pain_gap.csv`, `theme_by_app.csv`.
 
 ## Theme briefs
 
-### 1. Bank sync: the unsolved floor
+### 1. Bank sync, the floor no one has fixed
 
-**What users say.** Accounts disconnect, reconnecting creates duplicates or loses weeks of data, and the app often gives no sign that anything is wrong.
+250 of the 1,290 tagged reviews (19%) are about bank connections. The complaints repeat across apps: accounts silently disconnect, transactions arrive days late or not at all, reconnecting creates duplicates or wipes history, and some banks just aren't supported. 19 of the sync complaints say the app blamed Plaid, a third party or a "known issue".
 
-- "essentially no UI for telling you that your accounts haven't been synced due to a problem, leading me to miss all spending on a few accounts for nearly a year" (Monarch, `monarch:a:14704658469`)
-- "relinking them causes massive issues. Every single purchase and deposit gets duplicated" (Rocket Money, `rocketmoney:a:14669858797`)
-- "transactions from that “reconnection” point on never came through" (Rocket Money, `rocketmoney:a:14742321124`)
-- "if you have shared credit cards or replace cards, expect duplicate transactions that support won't fix" (Monarch, `monarch:a:14363103705`)
+- "The team unfortunately never advises customers that they are having issues" (PocketGuard, `pocketguard:a:14485863334`)
+- "No notice in the app that it happened" (Copilot, `copilot:a:14709853188`)
+- "very often you need to reconnect your accounts and then the double transactions appear" (Copilot, `copilot:a:13811964764`)
+- "every 1-2 months, I get like 50-100 DUPLICATE TRANSACTIONS that I then have to manually delete, 1 by 1" (EveryDollar, `everydollar:a:14085323678`)
+- "all my historical data was removed" (Simplifi, `simplifi:a:13663923632`)
+- "oh this is a known issue from months ago with absolutely no update what so ever" (Simplifi, `simplifi:g:27234668-e3e1-40c9-8214-768870f1ab48`)
+- "I hate that I now spend at least an hour every week to manually enter transactions" (YNAB, `ynab:g:fc0b217d-83dc-429c-994a-6820249c7626`)
+- "stop spending time on that AI nonsense nobody asked for. Fix your core issues first - missing transactions, breaking connections" (Monarch, `monarch:g:1e3fe6af-6b47-4095-b649-f0d9a1f138b7`)
 
-**Root cause.** Both apps depend on third-party data aggregators, and several reviewers blame Plaid by name. What users judge them on is what happens when a connection breaks: whether they're told, whether history is repaired, whether duplicates are cleaned up.
+**Why it matters:** "its value depends entirely on being able to sync with your financial institution" (PocketGuard, `pocketguard:a:14553856626`). When sync breaks, every budget, report and alert built on it is wrong.
 
-**Unmet need.** Visible connection health, gap backfill after a reconnect, and automatic de-duplication (for example when a card is replaced or shared).
+**The unmet need**, in users' words:
+- tell me when a connection fails
+- refill the gap after I reconnect
+- remove duplicates for me
+- tell me before I pay whether my bank, credit union, Venmo, Cash App or store card works
+- support non-US banks and multiple currencies, which international users ask for in 18 reviews
 
-### 2. Subscription cancellation: Rocket Money's promise gap
+### 2. Updates that break what worked
 
-**What users say.** People install Rocket Money because of ads promising one-tap cancellation. They then find it misses subscriptions or can only cancel the easy ones.
+Every app has some reviews like this, but they cluster in YNAB (25 of 120 tagged), EveryDollar (17) and Goodbudget (15 of 86).
 
-- "it only found 3 outta like 10" (`rocketmoney:a:14722443451`)
-- "all it does is cancel the ones that are already easy to cancel" (`rocketmoney:a:14649051969`)
+- "More scrolling and more taps for what used to take one tap" (YNAB, `ynab:a:14158438732`)
+- "locked out their customers from their OWN budgets with their latest update" (EveryDollar, `everydollar:g:762973c6-7716-44ad-9f0b-f0239202fa9b`)
+- "But since it's last upgrade nothing works" (Goodbudget, `goodbudget:g:27a0cf11-aa5d-4792-b32c-9764d74a8c51`)
+- "Why release an update when 2/3 of the tools aren’t even completed?" (PocketGuard, `pocketguard:a:14453021311`)
 
-**Unmet need.** Detection that covers every subscription, including other email accounts and app-store billing, and honest messaging about what can't be cancelled. 44 Rocket Money reviews (13%) ask for exactly one of these two things.
+**The unmet need:** stability for loyal users. That means testing before release, a way to keep the old layout, and no locking of data the user still wants to edit. EveryDollar's past-month lock alone produced 8 requests to "edit past months".
 
-### 3. Pricing and billing trust
+### 3. Support that can't escalate
 
-**What users say.** Paying a subscription to cut subscriptions reads as ironic, and charges after a trial or cancellation read as deceptive.
+- "a Chatbot is not enough to help me" (Simplifi, `simplifi:a:14667818169`)
 
-- "Subscription to cancel subscriptions" (`rocketmoney:a:14690844208`)
-- "They warn you about every subscription under the sun… except their own" (`rocketmoney:a:14585435352`)
-- "Moving it behind an exclusive Premium+ paywall" (bill negotiation, `rocketmoney:a:14690686612`)
+When a bank link or the budget's numbers break, users want a ticket that a person actually picks up. Requests for "human support" come from 6 of the 8 apps.
 
-Monarch gets milder price complaints (12.2%), mostly that the free trial is short, the fee is high, and cancellation happens outside the app.
+### 4. App-specific gaps
 
-**Unmet need.** Users want three things: renewal reminders for the app's own fee, cancellation inside the app, and the price shown before account linking.
+- **Rocket Money:** subscription detection and cancellation miss many subscriptions (29.5%). The top requests are "working subscription cancellation" (19) and "detect all subscriptions" (12).
+- **EveryDollar and Goodbudget:** problems with budget logic and envelope math. Examples: savings that don't reduce what's left to spend, totals that don't add up, recurring items that can't be scheduled.
+- **YNAB:** churn in the interface (30% ease-of-use complaints). Users ask for the progress bars back and fewer taps.
+- **Copilot:** iOS only, and users ask for Android. It also has gaps tracking income categories and investment contributions.
 
-### 4. Support: AI first, human never
+### Who's happiest
 
-- "if the user persists long enough they can get to a Zendesk ticket" (Monarch, `monarch:a:14355273654`)
-- "A phone line is need. Enough AI support and overworked chat representatives" (Rocket Money, `rocketmoney:a:14695106467`)
-
-**Unmet need.** Users want a reachable human when money or data is at stake. In Rocket Money's reviews, trust is also hurt by aggressive advertising (47 reviews mention ads) and suspicion of data sharing (12 reviews).
-
-### 5. Monarch-specific: update regressions and flexibility
-
-Monarch's complaints lean toward product changes: the current month was removed from cash flow and reports, and later updates brought lag and crashes (6.5%). There are also requests for more budgeting flexibility.
-
-- "The current month is not showing anymore and that’s the most helpful thing" (`monarch:a:14355848741`)
-- "you can’t budget by paycheck and can only budget by month" (`monarch:a:14331154897`)
-
-Other requests each come up once or twice: budgeting by paycheck, goal contributions that vary for variable income, percentage-based goals, an Apple Watch app, support for the iPhone Duo, and API/MCP access to the user's own data.
-
-### Where Monarch is winning
-
-- **Former Mint users:** "Ever since Mint was shutdown, I’ve been having the hardest time finding a budgeting app that fits my needs" (`monarch:a:14361874879`). They are Monarch's happiest segment, averaging 4.5 stars.
-- **Couples and families:** shared household budgets are praised far more often than criticised. The one recurring gap is a partner invite or membership that doesn't work.
+- **Copilot** has the highest average rating (3.73) and **Monarch** has the lowest share of complaints (48%).
+- **Former Mint users** (42 tagged reviews) still choose an app by comparing it with Mint. **Couples** (56) value shared budgets but ask for joint and individual views and per-person roles.
 
 ## Method
 
-1. **Data.** Two Apify exports of the actor "The Better App Store Reviews Scraper", one for Monarch and one for Rocket Money (US storefront, sorted by most recent). Imported with `python -m pipeline.apify import`, which removed 13 duplicate or very short reviews (600 down to 587).
-2. **Tagging.** Each review was tagged against the frozen 15-theme codebook in `config/themes.json` with a primary theme, all themes mentioned, sentiment, type, stated user segment and unmet need. The Claude API wasn't available in this environment, so Claude tagged every review by reading it directly in the working session. The tags use the same schema as `pipeline/tag.py`.
-3. **Analysis.** `python -m pipeline.analyze` (pain rates, pain gap, heatmap). Every quote above was checked word for word against its source review.
+1. **Collection.** A GitHub Actions workflow (`.github/workflows/scrape.yml`) runs `pipeline.find_ids` and `pipeline.scrape` on a GitHub runner. That's needed because this cloud session can't reach the app stores. It pulled the Apple customer-reviews feed from 7 English-language storefronts and Google Play (en, US) for the last 12 months. Store IDs were checked by hand (`config/apps.json`) after the first run picked wrong Google Play packages. Cleaning removed duplicates and reviews under 20 characters, leaving 7,396 reviews.
+2. **Sample.** No Anthropic API key was available, so the full tagging run (`pipeline.tag`) couldn't run. Claude tagged a seeded random sample by reading each review in the working session: up to 120 reviews for each of six apps, all 86 for Goodbudget, and 60 Google Play reviews each for Monarch and Rocket Money. These were added to 484 App Store reviews tagged earlier for those two apps. Tags follow the frozen 15-theme codebook (`config/themes.json`) and the `pipeline.tag` schema.
+3. **Analysis.** `python -m pipeline.analyze`. Pricing and "other" are excluded from the rankings. Every quote was checked word for word against its source review.
 
 ## Limits
 
-- **Two apps, not a category.** "Better of the two" is not "best in the category". Findings about Rocket Money's subscription feature are specific to Rocket Money.
-- **US App Store only, about 3.5 months.** Monarch covers 20 Jul to 3 Nov and Rocket Money covers 16 Sep to 3 Nov, so the windows differ and trends over time aren't comparable. Google Play isn't included.
-- **One tagger, no reliability check yet.** The planned second-model re-tag of a 20% sample (`python -m pipeline.reliability`) hasn't been run, so there is no agreement rate to quote yet.
-- **Review bias.** App-store reviewers lean toward the very unhappy and the very happy. Treat percentages as the strength of a signal, not as rates across the whole user base.
+- **This is a sample.** Most apps have about 120 tagged reviews, so a rate like 15% carries a margin of roughly ±6 points. The pattern holds, since sync shows up in all 8 apps, but small gaps between apps don't mean much.
+- **Unequal samples.** Monarch and Rocket Money have more tagged reviews (306 and 298), mostly from the App Store. The other apps mix both stores.
+- **One tagger, no reliability check.** The second-model check (`pipeline.reliability`) needs an API key.
+- **Free sources cap volume.** Apple's feed returns at most about 500 reviews per storefront, and PocketGuard and Goodbudget had few reviews in the 12-month window.
+- **Review bias.** App-store reviewers lean toward the very unhappy and the very happy.
 
-## To reach the full study
+## Full-scale run
 
-Export the other six apps from Apify (YNAB, Copilot, EveryDollar, PocketGuard, Simplifi, Goodbudget), ideally across several countries, and get Google Play reviews with `pipeline.scrape`. Then run `pipeline.tag`, `pipeline.reliability`, `pipeline.synthesize` and `pipeline.analyze` with an API key. The same report then becomes a real category-wide "pain gap".
+Add `ANTHROPIC_API_KEY` as a secret in the GitHub repo, then run tagging, reliability and synthesis on all 7,396 reviews. That replaces the sample with full counts and adds an agreement rate you can quote.

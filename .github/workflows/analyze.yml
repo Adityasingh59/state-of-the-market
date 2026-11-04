@@ -1,0 +1,51 @@
+name: Tag and analyze all reviews
+
+# Full-scale run: tags every review in the scraped-data branch with Claude,
+# runs the reliability check, synthesis and analysis, then pushes reports to
+# the `analysis` branch. Needs the ANTHROPIC_API_KEY repository secret.
+# The cost tracker stops before SMM_BUDGET_USD is passed.
+on:
+  workflow_dispatch:
+    inputs:
+      budget_usd:
+        description: "Spend cap in USD"
+        default: "58"
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SMM_BUDGET_USD: ${{ inputs.budget_usd }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Load scraped reviews
+        run: |
+          git fetch origin scraped-data
+          git checkout origin/scraped-data -- data/reviews.csv data/raw
+          git reset -q data
+      - name: Tag
+        run: python -m pipeline.tag
+      - name: Reliability check
+        run: python -m pipeline.reliability
+      - name: Synthesis
+        run: python -m pipeline.synthesize --top 10
+      - name: Analysis
+        run: python -m pipeline.analyze && python -m pipeline.cost
+      - name: Push results to analysis branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B analysis
+          git add -f reports data/tagged data/cost_ledger.jsonl || true
+          git commit -m "Full analysis $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
+          git push -f origin analysis

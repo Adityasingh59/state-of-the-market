@@ -1,25 +1,34 @@
 # Summary numbers
 
-- Reviews analyzed: **587** across **2** apps (Monarch Money, Rocket Money)
-- Date range: 2026-07-20 to 2026-11-03
-- Stores: appstore 587
-- Pain reviews (negative/mixed, bug, request or complaint): 64.4%
+- Reviews analyzed: **1,290** across **8** apps (Copilot Money, EveryDollar, Goodbudget, Monarch Money, PocketGuard, Rocket Money, Simplifi by Quicken, YNAB)
+- Date range: 2025-11-05 to 2026-11-03
+- Stores: appstore 914, play 376
+- Pain reviews (negative/mixed, bug, request or complaint): 61.9%
 
 ## Pain gap (sorted by the best app's complaint rate)
 
 | theme                | theme_name                       |   pain_reviews |   category_pain_rate | best_app    |   best_app_rate | worst_app   |   worst_app_rate |   feature_requests |   avg_rating_when_mentioned |
 |:---------------------|:---------------------------------|---------------:|---------------------:|:------------|----------------:|:------------|-----------------:|-------------------:|----------------------------:|
-| pricing              | Pricing and subscription         |            127 |               0.2164 | monarch     |          0.122  | rocketmoney |           0.2845 |                  4 |                        1.92 |
-| bank_sync            | Bank connection and sync         |             71 |               0.121  | rocketmoney |          0.0968 | monarch     |           0.1545 |                  6 |                        2.27 |
-| support_trust        | Customer support and trust       |             85 |               0.1448 | monarch     |          0.0935 | rocketmoney |           0.1818 |                  1 |                        1.58 |
-| ux_ease              | Ease of use and design           |             48 |               0.0818 | monarch     |          0.0569 | rocketmoney |           0.0997 |                  6 |                        3.44 |
-| reports_insights     | Reports and insights             |             27 |               0.046  | rocketmoney |          0.044  | monarch     |           0.0488 |                  6 |                        3.74 |
-| categorization       | Transaction categorization       |             21 |               0.0358 | rocketmoney |          0.0293 | monarch     |           0.0447 |                  2 |                        3.33 |
-| platform_access      | Platform and device support      |             20 |               0.0341 | rocketmoney |          0.0264 | monarch     |           0.0447 |                  8 |                        3.38 |
-| bills_subscriptions  | Bills and subscription tracking  |            119 |               0.2027 | monarch     |          0.0163 | rocketmoney |           0.3372 |                  6 |                        2.23 |
-| budgeting_method     | Budgeting method and flexibility |             19 |               0.0324 | rocketmoney |          0.0147 | monarch     |           0.0569 |                  8 |                        3.73 |
-| performance_bugs     | Performance and stability        |             21 |               0.0358 | rocketmoney |          0.0147 | monarch     |           0.065  |                  0 |                        1.77 |
-| goals_savings        | Goals and savings                |             16 |               0.0273 | monarch     |          0.0122 | rocketmoney |           0.0381 |                  7 |                        3.95 |
-| investments_networth | Investments and net worth        |              8 |               0.0136 | rocketmoney |          0.0059 | monarch     |           0.0244 |                  4 |                        4.12 |
-| migration            | Switching and import             |              5 |               0.0085 | rocketmoney |          0.0059 | monarch     |           0.0122 |                  1 |                        4.38 |
-| shared_finances      | Shared and household finances    |              7 |               0.0119 | rocketmoney |          0.0029 | monarch     |           0.0244 |                  2 |                        4.19 |
+| bank_sync            | Bank connection and sync         |            214 |               0.1659 | goodbudget  |          0.0814 | simplifi    |           0.325  |                 17 |                        2.47 |
+| ux_ease              | Ease of use and design           |            129 |               0.1    | monarch     |          0.049  | ynab        |           0.3    |                 12 |                        3.23 |
+| support_trust        | Customer support and trust       |            146 |               0.1132 | goodbudget  |          0.0349 | pocketguard |           0.1833 |                  4 |                        1.95 |
+| performance_bugs     | Performance and stability        |            107 |               0.0829 | rocketmoney |          0.0235 | goodbudget  |           0.3488 |                  1 |                        2.13 |
+| platform_access      | Platform and device support      |             73 |               0.0566 | pocketguard |          0.0167 | goodbudget  |           0.1395 |                 25 |                        2.8  |
+| reports_insights     | Reports and insights             |             54 |               0.0419 | everydollar |          0.0167 | pocketguard |           0.0583 |                 18 |                        4.04 |
+| budgeting_method     | Budgeting method and flexibility |            104 |               0.0806 | rocketmoney |          0.0134 | goodbudget  |           0.2558 |                 27 |                        3.63 |
+| categorization       | Transaction categorization       |             58 |               0.045  | goodbudget  |          0.0116 | simplifi    |           0.125  |                 20 |                        3.49 |
+| shared_finances      | Shared and household finances    |             25 |               0.0194 | rocketmoney |          0.0034 | goodbudget  |           0.0698 |                  7 |                        3.92 |
+| goals_savings        | Goals and savings                |             26 |               0.0202 | pocketguard |          0      | everydollar |           0.0583 |                 10 |                        4.09 |
+| bills_subscriptions  | Bills and subscription tracking  |            115 |               0.0891 | ynab        |          0      | rocketmoney |           0.2953 |                 14 |                        2.48 |
+| investments_networth | Investments and net worth        |             33 |               0.0256 | goodbudget  |          0      | simplifi    |           0.0833 |                 13 |                        3.78 |
+| migration            | Switching and import             |             14 |               0.0109 | ynab        |          0      | simplifi    |           0.025  |                  3 |                        3.98 |
+
+## Growing complaints (last 3 months vs earlier)
+
+|                     |   recent_share |   earlier_share |   change_pts |
+|:--------------------|---------------:|----------------:|-------------:|
+| bills_subscriptions |         0.1434 |          0.0383 |        10.52 |
+| support_trust       |         0.1333 |          0.1001 |         3.32 |
+| ux_ease             |         0.1    |          0.1126 |        -1.25 |
+| performance_bugs    |         0.0654 |          0.0952 |        -2.99 |
+| bank_sync           |         0.1413 |          0.1874 |        -4.61 |

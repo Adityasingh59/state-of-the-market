@@ -13,7 +13,7 @@ from . import config
 PAIN_SENTIMENTS = {"negative", "mixed"}
 PAIN_TYPES = {"bug", "feature_request", "complaint"}
 
-MIN_APP_REVIEWS = 200  # apps below this are left out of "best app" comparisons
+MIN_APP_REVIEWS = 80  # apps with fewer tagged reviews are left out of "best app" comparisons
 
 # Themes kept in the tags but left out of the pain-gap ranking, the charts and
 # the synthesis. Price complaints appear for every paid app and do not point to
