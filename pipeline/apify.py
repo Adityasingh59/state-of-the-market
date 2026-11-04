@@ -54,7 +54,7 @@ ALIASES = {
     "title": ["title", "reviewTitle", "review_title"],
     "text": ["text", "review", "content", "body", "reviewText", "review_text", "comment"],
     "rating": ["rating", "score", "stars", "ratingValue", "rate"],
-    "date": ["date", "updated", "reviewDate", "review_date", "at", "publishedAt", "createdAt", "published"],
+    "date": ["date", "updatedAt", "updated_at", "updated", "reviewDate", "review_date", "at", "publishedAt", "createdAt", "published"],
     "version": ["version", "appVersion", "app_version", "reviewCreatedVersion"],
     "country": ["country", "countryCode", "country_code", "storefront", "store_country"],
     "app": ["appId", "app_id", "appID", "trackId", "applicationId", "appUrl", "app_url", "url",
