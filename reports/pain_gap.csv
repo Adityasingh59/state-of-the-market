@@ -1,0 +1,15 @@
+theme,theme_name,pain_reviews,category_pain_rate,best_app,best_app_rate,worst_app,worst_app_rate,feature_requests,avg_rating_when_mentioned
+pricing,Pricing and subscription,127,0.2164,monarch,0.122,rocketmoney,0.2845,4,1.92
+bank_sync,Bank connection and sync,71,0.121,rocketmoney,0.0968,monarch,0.1545,6,2.27
+support_trust,Customer support and trust,85,0.1448,monarch,0.0935,rocketmoney,0.1818,1,1.58
+ux_ease,Ease of use and design,48,0.0818,monarch,0.0569,rocketmoney,0.0997,6,3.44
+reports_insights,Reports and insights,27,0.046,rocketmoney,0.044,monarch,0.0488,6,3.74
+categorization,Transaction categorization,21,0.0358,rocketmoney,0.0293,monarch,0.0447,2,3.33
+platform_access,Platform and device support,20,0.0341,rocketmoney,0.0264,monarch,0.0447,8,3.38
+bills_subscriptions,Bills and subscription tracking,119,0.2027,monarch,0.0163,rocketmoney,0.3372,6,2.23
+budgeting_method,Budgeting method and flexibility,19,0.0324,rocketmoney,0.0147,monarch,0.0569,8,3.73
+performance_bugs,Performance and stability,21,0.0358,rocketmoney,0.0147,monarch,0.065,0,1.77
+goals_savings,Goals and savings,16,0.0273,monarch,0.0122,rocketmoney,0.0381,7,3.95
+investments_networth,Investments and net worth,8,0.0136,rocketmoney,0.0059,monarch,0.0244,4,4.12
+migration,Switching and import,5,0.0085,rocketmoney,0.0059,monarch,0.0122,1,4.38
+shared_finances,Shared and household finances,7,0.0119,rocketmoney,0.0029,monarch,0.0244,2,4.19

@@ -1,21 +1,81 @@
 {
-  "frozen": false,
+  "frozen": true,
   "notes": "Starter list for budgeting apps. Run `python -m pipeline.draft_themes` to redraft it from a 200-review sample, edit by hand, then set frozen to true. Do not change it after full tagging starts.",
   "themes": [
-    {"id": "bank_sync", "name": "Bank connection and sync", "definition": "Linking accounts, connections breaking, transactions missing, delayed or duplicated imports."},
-    {"id": "categorization", "name": "Transaction categorization", "definition": "Auto-categorization accuracy, rules, recategorizing, splitting transactions."},
-    {"id": "budgeting_method", "name": "Budgeting method and flexibility", "definition": "How budgets are set up: envelopes, zero-based, rollover, flexible or custom budget periods."},
-    {"id": "pricing", "name": "Pricing and subscription", "definition": "Price level, price increases, free tier limits, trials, cancellation and refunds."},
-    {"id": "reports_insights", "name": "Reports and insights", "definition": "Charts, spending trends, net worth, cash-flow views, exports of reports."},
-    {"id": "ux_ease", "name": "Ease of use and design", "definition": "Learning curve, navigation, onboarding, visual design, clutter."},
-    {"id": "performance_bugs", "name": "Performance and stability", "definition": "Crashes, slowness, freezes, data not saving, app-update regressions."},
-    {"id": "investments_networth", "name": "Investments and net worth", "definition": "Tracking investment, retirement, crypto, property or loan balances."},
-    {"id": "bills_subscriptions", "name": "Bills and subscription tracking", "definition": "Recurring bill detection, reminders, cancelling subscriptions through the app."},
-    {"id": "shared_finances", "name": "Shared and household finances", "definition": "Couples, partners, family members sharing budgets or accounts."},
-    {"id": "goals_savings", "name": "Goals and savings", "definition": "Savings goals, debt payoff plans, progress tracking."},
-    {"id": "platform_access", "name": "Platform and device support", "definition": "Web vs mobile parity, tablet, widgets, watch, offline use, missing platforms."},
-    {"id": "support_trust", "name": "Customer support and trust", "definition": "Support responsiveness, account issues, privacy, security, data ownership."},
-    {"id": "migration", "name": "Switching and import", "definition": "Moving from another app (for example Mint), importing history or CSV files."},
-    {"id": "other", "name": "Other", "definition": "Anything that fits none of the themes above."}
+    {
+      "id": "bank_sync",
+      "name": "Bank connection and sync",
+      "definition": "Linking accounts, connections breaking, transactions missing, delayed or duplicated imports."
+    },
+    {
+      "id": "categorization",
+      "name": "Transaction categorization",
+      "definition": "Auto-categorization accuracy, rules, recategorizing, splitting transactions."
+    },
+    {
+      "id": "budgeting_method",
+      "name": "Budgeting method and flexibility",
+      "definition": "How budgets are set up: envelopes, zero-based, rollover, flexible or custom budget periods."
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing and subscription",
+      "definition": "Price level, price increases, free tier limits, trials, cancellation and refunds."
+    },
+    {
+      "id": "reports_insights",
+      "name": "Reports and insights",
+      "definition": "Charts, spending trends, net worth, cash-flow views, exports of reports."
+    },
+    {
+      "id": "ux_ease",
+      "name": "Ease of use and design",
+      "definition": "Learning curve, navigation, onboarding, visual design, clutter."
+    },
+    {
+      "id": "performance_bugs",
+      "name": "Performance and stability",
+      "definition": "Crashes, slowness, freezes, data not saving, app-update regressions."
+    },
+    {
+      "id": "investments_networth",
+      "name": "Investments and net worth",
+      "definition": "Tracking investment, retirement, crypto, property or loan balances."
+    },
+    {
+      "id": "bills_subscriptions",
+      "name": "Bills and subscription tracking",
+      "definition": "Recurring bill detection, reminders, cancelling subscriptions through the app."
+    },
+    {
+      "id": "shared_finances",
+      "name": "Shared and household finances",
+      "definition": "Couples, partners, family members sharing budgets or accounts."
+    },
+    {
+      "id": "goals_savings",
+      "name": "Goals and savings",
+      "definition": "Savings goals, debt payoff plans, progress tracking."
+    },
+    {
+      "id": "platform_access",
+      "name": "Platform and device support",
+      "definition": "Web vs mobile parity, tablet, widgets, watch, offline use, missing platforms."
+    },
+    {
+      "id": "support_trust",
+      "name": "Customer support and trust",
+      "definition": "Support responsiveness, account issues, privacy, security, data ownership."
+    },
+    {
+      "id": "migration",
+      "name": "Switching and import",
+      "definition": "Moving from another app (for example Mint), importing history or CSV files."
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "definition": "Anything that fits none of the themes above."
+    }
   ]
 }
