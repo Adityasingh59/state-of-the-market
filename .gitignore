@@ -1,0 +1,9 @@
+# Scraped and tagged data stays local (large, and re-creatable from the scripts)
+data/
+# Local secrets and environments
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+config/themes.previous.json
