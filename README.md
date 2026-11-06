@@ -2,7 +2,7 @@
 
 This project answers one question: **what are users asking for that no app in this category has built?**
 
-It pulls 20,000+ public App Store and Google Play reviews across 8 to 10 competing apps. Claude tags each review against a fixed theme list, a second model re-tags a 20% sample to measure reliability, and the result is a ranked map of unmet needs with evidence for each one.
+It pulls 20,000+ public App Store and Google Play reviews across 8 to 10 competing apps. An AI model tags each review against a fixed theme list, a second model re-tags a 20% sample to measure reliability, and the result is a ranked map of unmet needs with evidence for each one.
 
 The default category is personal finance and budgeting apps (YNAB, Monarch, Copilot, Rocket Money and peers). To study a different category, edit `config/apps.json`.
 
@@ -77,7 +77,7 @@ The importer maps the usual field names automatically and prints which field it 
 - After the call returns, the reservation is replaced with the real cost from `response.usage`. One line is written per call to `data/cost_ledger.jsonl`.
 - The ledger covers every step and every run, so the cap applies to the whole project.
 
-Prices are in `pipeline/config.py`. Check them against the [pricing page](https://platform.claude.com/docs/en/about-claude/pricing) before a large run. The ledger is an estimate, so also set a spend limit in the Anthropic Console.
+Prices are in `pipeline/config.py`. Check them against the model provider's current pricing before a large run. The ledger is an estimate, so also set a spend limit in your API account.
 
 If the budget runs short, run the steps in this order: tagging, then reliability, then synthesis. Trends need no API calls.
 
@@ -95,13 +95,13 @@ If the budget runs short, run the steps in this order: tagging, then reliability
 
 Tagging uses structured JSON output (`output_config.format`), so every response matches the schema and theme ids are limited to the frozen list. Reviews are sent 25 per request and 6 requests run in parallel. If a batch fails, it is split in half and retried.
 
-**Reliability.** A 20% random sample is re-tagged by a different model (`claude-sonnet-5-5` by default) using a reworded prompt with the same codebook. `reports/reliability.json` reports percent agreement and Cohen's kappa for primary theme, sentiment and type, the mean Jaccard overlap of theme sets, and per-theme agreement, which flags themes with fuzzy definitions.
+**Reliability.** A 20% random sample is re-tagged by a different model using a reworded prompt with the same codebook. `reports/reliability.json` reports percent agreement and Cohen's kappa for primary theme, sentiment and type, the mean Jaccard overlap of theme sets, and per-theme agreement, which flags themes with fuzzy definitions.
 
 **Pain gap.** A review counts as *pain* for a theme when it mentions the theme and is negative or mixed, or is a bug report, feature request or complaint. For each theme and app, the pain rate is the app's pain reviews on that theme divided by all of the app's reviews. The **floor** is the lowest pain rate among apps with at least 200 reviews. A high floor means even the best app in the category has not solved the problem, and that is the unmet-need signal.
 
 **Synthesis.** For each of the top pain themes, the synthesis model gets per-app statistics, the most common unmet-need phrases, and a sample of reviews balanced across apps. It returns the root cause, affected segments, best-handling app, unmet need, a product bet and supporting quotes. Each quote is checked word for word against the review it cites, and quotes that fail the check are dropped.
 
-**Models.** Tagging and synthesis use `claude-opus-5-5`, the reliability check uses `claude-sonnet-5-5`, and model and effort can be changed in `pipeline/config.py` or `.env`. Requests turn on server-side refusal fallback (`fallbacks: "default"`). Turn it off with `SMM_FALLBACKS=0`.
+**Models.** Tagging, synthesis and the reliability check each use their own model, and model and effort can be changed in `pipeline/config.py` or `.env`. Requests turn on server-side refusal fallback (`fallbacks: "default"`). Turn it off with `SMM_FALLBACKS=0`.
 
 ## Limits to state in any write-up
 
@@ -116,7 +116,7 @@ config/apps.json        apps, store IDs, storefronts
 config/themes.json      theme codebook (freeze before tagging)
 pipeline/config.py      paths, models, prices, budget cap
 pipeline/cost.py        cost tracker and hard stop
-pipeline/llm.py         Claude call with structured output
+pipeline/llm.py         Model call with structured output
 pipeline/find_ids.py    store ID lookup
 pipeline/scrape.py      App Store RSS + Google Play scraper, merge
 pipeline/draft_themes.py
