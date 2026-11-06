@@ -1,0 +1,36 @@
+== Monarch Money
+    App Store: 593
+    Play: 883
+== YNAB
+    App Store: 621
+    Play: 406
+== Rocket Money
+    App Store: 500
+    Play: 4888
+== Copilot Money
+    App Store: 500
+== EveryDollar
+    App Store: 460
+    Play: 377
+== PocketGuard
+    App Store: 96
+    Play: 115
+== Simplifi by Quicken
+    App Store: 227
+    Play: 202
+== Goodbudget
+    App Store: 42
+    Play: 50
+
+Merged 9960 raw rows -> 7396 reviews in /home/runner/work/state-of-the-market/state-of-the-market/data/reviews.csv
+store        appstore  play
+app                        
+copilot           495     0
+everydollar       456   340
+goodbudget         42    44
+monarch           586   816
+pocketguard        96   108
+rocketmoney       326  2674
+simplifi          225   185
+ynab              620   383
+Date range: 2025-11-05 to 2026-11-03
